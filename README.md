@@ -1,5 +1,7 @@
 # Challenge Week 12 Submission Template
 
+Peyman Mortazavi
+
 # Reddit Data Challenges
 
 ## Challenge 1
