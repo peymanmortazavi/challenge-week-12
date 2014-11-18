@@ -68,22 +68,22 @@ ANSWER: 110.08333333333333
 
 ## Challenge 3
 
-db.businesses.count( { city: "Madison", state: "WI" } )
+db.businesses.aggregate([{ $match: { city: "Madison", state: "WI" } }, { $group: { _id: null, total: { $sum: "$review_count" } } }, { $sort: { total: -1 } } ])
 
-ANSWER: 1630
+ANSWER: 34410
 
 
 ## Challenge 4
 
-db.businesses.count( { city: "Las Vegas", state: "NV" } )
+db.businesses.aggregate([{ $match: { city: "Las Vegas", state: "NV" } }, { $group: { _id: null, total: { $sum: "$review_count" } } }, { $sort: { total: -1 } } ])
 
-ANSWER: 12021
+ANSWER: 577509
 
 ## Challenge 5
 
-db.businesses.count( { city: "Phoenix", state: "AZ" } )
+db.businesses.aggregate([{ $match: { city: "Phoenix", state: "AZ" } }, { $group: { _id: null, total: { $sum: "$review_count" } } }, { $sort: { total: -1 } } ])
 
-ANSWER: 7499
+ANSWER: 200089
 
 ## Challenge 6 [BONUS]
 
